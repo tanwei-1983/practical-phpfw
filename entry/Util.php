@@ -20,7 +20,7 @@ class Util
         return strtoupper(md5($signStr));
     }
 
-    static function checkStrExist(string $var)
+    static function checkStrExist(?string $var)
     {
         return isset($var) && trim($var)!=='';
     }
