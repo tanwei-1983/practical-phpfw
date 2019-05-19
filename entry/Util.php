@@ -8,7 +8,7 @@ namespace entry;
 
 class Util
 {
-    static function getCheckSign($wxInfo, $signKey='KEY') //change frequency of the sign is 2 hours
+    static function getCheckSign($wxInfo, $signKey='KEY') //signKey is changed every 2 hours
     {
         $signArr=[];
         ksort($wxInfo);

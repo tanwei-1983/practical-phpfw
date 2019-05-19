@@ -9,7 +9,7 @@ spl_autoload_register(function ($ns) {
 
 function entry()
 {
-    $postSign=$_POST['sign'] ?? ''; //change frequency of the sign is 2 hours
+    $postSign=$_POST['sign'] ?? ''; //signKey is changed every 2 hours
     if(!Util::checkStrExist($postSign)) {
         Util::echoRetMsg(false, "sign does not exist");
     }
