@@ -22,7 +22,7 @@ function entry()
         'foo/bar2.action'=>'\ns1\FooAction::bar2',
     ];
     $actionUrl=$_POST['actionUrl'] ?? '';
-    if(!Util::checkStrExist($actionUrl) || !isset($url2path[$actionUrl])) {
+    if(! (Util::checkStrExist($actionUrl) && isset($url2path[$actionUrl])) ) {
         Util::echoRetMsg(false, "invalid connection!");
     }
     $url2path[$actionUrl]();

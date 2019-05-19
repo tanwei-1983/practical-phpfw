@@ -248,7 +248,7 @@ class ProcDb
             $inColStr = implode(',', array_keys($dataArr[0]));
             $inStr = implode(',', $strArr);
         } else {//单笔
-            $dataArr=array_filter($dataArr, '\comm\Util::checkStrExist');
+            $dataArr=array_filter($dataArr, '\entry\Util::checkStrExist');
             $inColStr = implode(',', array_keys($dataArr));
             $inStr = '(' . implode(',', array_fill(0, count($dataArr), '?')) . ')';
             $valArr = array_values($dataArr);
@@ -279,7 +279,7 @@ class ProcDb
             $inColStr = implode(',', $keyArr);
             $inStr = implode(',', $strArr);
         } else {//单笔
-            $dataArr=array_filter($dataArr, '\comm\Util::checkStrExist');
+            $dataArr=array_filter($dataArr, '\entry\Util::checkStrExist');
             $colNameA=array_keys($dataArr);
             $inValA=[];
             foreach($colNameA as $colName){
